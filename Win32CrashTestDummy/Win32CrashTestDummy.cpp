@@ -22,7 +22,9 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	THandle handle = CGoogleMapsClientInteface_Create();
 
-	CGoogleMapsClientInteface_SetAddress(handle, "Google Building 44, Mountain View, California, Stati Uniti");
+	const char* address = "Google Building 44, Mountain View, California, Stati Uniti";
+
+	CGoogleMapsClientInteface_SetAddress(handle, address);
 
 	const char* value = CGoogleMapsClientInteface_GetAddress(handle);
 	

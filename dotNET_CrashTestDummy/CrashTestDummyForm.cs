@@ -1,4 +1,4 @@
-﻿using GoogleMapsClientInteface;
+﻿using GoogleMapsAPI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,15 +22,15 @@ namespace dotNET_CrashTestDummy
 
         private void button1_Click(object sender, EventArgs e)
         {
-            GoogleMapsAPI googleMapsAPI = new GoogleMapsAPI();
+            GoogleMaps googleMaps = new GoogleMaps();
 
-            googleMapsAPI.Address = tbAddress.Text;
+            googleMaps.Address= tbAddress.Text;
 
-            bool retVal = googleMapsAPI.GetCoordinates();
+            bool retVal = googleMaps.GetCoordinates();
 
-            lblLatitude.Text = (retVal) ? googleMapsAPI.Latitude.ToString() : "Error";
+            lblLatitude.Text = (retVal) ? googleMaps.Latitude.ToString() : "Error";
 
-            lblLongitude.Text = (retVal) ? googleMapsAPI.Longitude.ToString() : "Error";
+            lblLongitude.Text = (retVal) ? googleMaps.Longitude.ToString() : "Error";
         }
     }
 }

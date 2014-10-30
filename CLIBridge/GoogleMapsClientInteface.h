@@ -17,13 +17,6 @@ private:
 
 	CGoogleMapsClientIntefacePrivate* _private;
 
-	string  m_address;
-
-	double m_latitude;
-
-	double m_longitude;
-
-
 #pragma endregion
 
 #pragma region Properties

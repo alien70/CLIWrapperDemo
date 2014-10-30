@@ -27,7 +27,11 @@ extern "C"
 	inline CLIBRIDGE_API void CGoogleMapsClientInteface_SetAddress(THandle handle, const char* value)
 	{
 		if (handle)
+		{
 			((CGoogleMapsClientInteface*)handle)->Address = value;
+
+			((CGoogleMapsClientInteface*)handle)->GetAddress();
+		}
 	}
 	inline CLIBRIDGE_API const char* CGoogleMapsClientInteface_GetAddress(THandle handle)
 	{
